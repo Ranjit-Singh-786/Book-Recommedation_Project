@@ -3,29 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Recommender System</title>
-    <!-- Latest compiled and minified CSS -->
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <style>
     .text-white{
         color:white
     }
+#navbar{
+    background-color: rgb(174, 209, 230);
+    font-size:17px;
+    fr
+    
+}
+
+h3{
+    margin-left: 10px;
+    margin-top: 450px;
+    
+    
+}
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(static/b1.jpg);
+	height: 100vh;
+	/* width:auto; */
+	background-size:cover;
+	/* background-attachment: fixed; */
+	/* margin: 0; */
+	/* padding: 0; */
+}
+#about{
+    color: white;
+    font-size: 30px;
+}
+#pro_deta {
+    margin-left: 10px;
+    color: white;
+    font-size: 25;
+}
 </style>
 <body style="background-color:black">
+<header>  
+  <nav class="navbar"  id="navbar">
+    <ul class="nav navbar-nav">
+        <li><a href="/">BOOK-NAME</a></li>
+        <li><a href="/recommend">RECOMMANDATION-1</a></li>
+        <li><a href="/recommend">RECOMMANDATION-2</a></li>
+        <li><a>CONTACT</a></li>
+    </ul>
+</nav>
+<b><u><h3 class="text-dark" style="font-size:30px" >BOOK RECOMMANDATION PROJECT.</h3></u></b>
 
-    <nav class="navbar" style="background-color:#00a65a">
-        <a class="navbar-brand">My Book recommender</a>
-        <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/recommend">Recommend</a></li>
-            <li><a>Contact</a></li>
-        </ul>
-    </nav>
+
+</header>
+<br>
+<center id="about">ABOUT THIS PROJECT</center>
+<hr>
+<p id="pro_deta">Recommendation engines are a subclass of machine learning which generally deal with ranking or rating products <br>
+     users. Loosely defined, a recommender system is a system which predicts ratings a user might give to a specific <br>
+      These predictions will then be ranked and returned back to the user.
+
+    They are used by various large name companies like Google, Instagram, Spotify,<br>
+     Amazon, Reddit, Netflix etc. often to increase engagement with users and the <br>
+      For example, Spotify would recommend songs similar to the ones you ve repeatedly listened to or <br>
+      liked so that you can continue using their platform to listen to music. <br> 
+      Amazon uses recommendations to suggest products to various users based on the data <br> 
+      they have collected for that user.
+    
+    Recommender systems are often seen as a “black box”, the model created by these <br>
+    large companies are not very easily interpretable. <br>
+    The results which are generated are often recommendations for the user for things that they need <br>
+     want but are unaware that they need <br>
+     want it until theyve been recommended to them.
+</p>
+<center id="about"> kind of Recommandation systems.</center>
+<hr>
+<h2 class="text-white" style="font-size:30px">Popularity-Based Recommendation System</h2>
+<hr>
+<p id="pro_deta">It is a type of recommendation system which works on the principle of <br>
+    popularity and or anything which is in trend. These systems check about the product or movie<br>
+     which are in trend or are most popular among the users and directly recommend those.
+    For example, if a product is often purchased by most people then the system will get to <br>
+    know that that product is most popular so for every new user who just signed it, the system will<br>
+     recommend that product to that user also and chances becomes high that the new user will also purchase that. </p>
+
+
+
+<h2 class="text-white" style="font-size:30px">Collaborative Filtering Systems</h2>
+<hr>
+<p id="pro_deta">Collaborative filtering is the process of predicting the interests of a user by identifying preferences and <br>
+    information from many users. This is done by filtering data for information or patterns using techniques involving<br>
+     collaboration among multiple agents, data sources, etc. The underlying intuition behind collaborative filtering is <br>
+     that if users A and B have similar taste in a product, then A and B are likely to have similar taste in other products as well.</p>
+
+     <h2 class="text-white" style="font-size:30px">Content Based Systems</h2>
+     <hr>
+     <p id="pro_deta">Content based systems generate recommendations based on the users preferences and profile.<br>
+         They try to match users to items which they’ve liked previously. The level of similarity between items is<br>
+          generally established based on attributes of items liked by the user. Unlike most collaborative filtering models<br>
+           which leverage ratings between target user and other users, content based models focus on the ratings provided by the<br>
+            target user themselves. In essence, the content based approach leverages different sources of data to generate recommendations.
+
+        The simplest forms of content based systems require the following sources of data (these requirements can increase based on the complexity <br>
+        of the system you’re trying to build</p>
+     
+        <h2 class="text-white" style="font-size:30px">Hybrid Recommendation System</h2>
+        <hr>
+        <p id="pro_deta">Various methods of recommendation systems have their own benefits and flaws. Often, many of these methods <br>
+            may seem restrictive when used in isolation, especially when multiple sources of data are available for the problem. Hybrid <br>
+            recommender systems are ones designed to use different available data sources to generate robust inferences.
+
+            Hybrid recommendation systems have two predominant designs, parallel and sequential. The parallel design provides the input <br>
+            to multiple recommendation systems, each of those recommendations are combined to generate one output. The sequential design provides <br>
+             the input parameters to a single recommendation engine, the output is passed on to the following recommender in a sequence. Refer to the figure<br>
+              below for a visual representation of both designs.</p>
+    
+        
+
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-white" style="font-size:50px">Top 50 Books</h1>
+                
             </div>
 
             {% for i in range(book_name|length) %}

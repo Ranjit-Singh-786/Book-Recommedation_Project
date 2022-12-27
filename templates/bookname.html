@@ -1,11 +1,13 @@
 <html>
     <head>
         <title>list of book name</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     </head>
 <style>
 h3{
-    margin-top: 18px;
-    margin-left: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
     font-size: 30px;
 }
 
@@ -13,21 +15,40 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   /* background-color: #96D4D4; */
-  border-radius: 10px;
+  border-radius: 7px;
   text-align: center;
   
 }
 table tr td:hover {
-    background-color: #e6a927;
+    background-color: #6cd8eb;
     }
     p{
-        margin-left: 40px;
+        margin-left: 15px;
+        color:rgb(75, 38, 3);
     }
+    #navbar{
+    background-color:transparent;
+    color: black;
+    font-size:17px;
+    fr
+    
+}
+#navbar ul li a {
+    color: white;
+    
+}
 </style>
-    <body >
+    <body style="background-color:rgb(201, 238, 101)">
+        <nav class="navbar" >
+        
+            <ul class="nav navbar-nav">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/recommend2">RECOMMANDATION-2</a></li>
+            </ul>
+        </nav>
+    
         <h3>These are all name of all famous books</h3>
         <p>you can copy the book Name from here. to get recommendation of the books.</p>
-        <a href="/">HOME</a>
         <table id="tabl">
             <th>BOOK NAMES</th>  
         {% for book in list_fo_book_name %}  

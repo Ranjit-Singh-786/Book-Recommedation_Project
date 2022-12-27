@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Recommender System</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+    .text-white{
+        color:white
+    }
+#navbar{
+    background-color: transparent;
+    color: black;
+    font-size:17px;
+    
+    
+}
+#navbar ul li a {
+    color: white;
+  
+}
+h3{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+
+}
+</style>
+<body style="background-color:black">
+
+    <nav class="navbar" >
+        <ul class="nav navbar-nav">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/bookName">BOOK-NAME</a></li>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-white" style="font-size:50px">Recommend Books</h1>
+
+        <!-- ## make a form in recomandation file -->
+                <form action="/recommend_books" method="post">
+                    <input name="user_input" type="text" class="form-control"><br>
+                    <input type="submit" class="btn btn-lg btn-warning">
+                </form>
+
+            </div>
+            <br>
+            <!-- style="color: aliceblue;" -->
+            <h3 >more suggestions for you 🌝</h3>
+
+            {% if data %}
+
+             {% for i in data %}
+                <div class="col-md-3" style="margin-top:50px">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="card-img-top" src="{{i[2]}}">
+                            <h4 class="text-white">Book:- {{i[0]}}</h4>
+                            <h4 class="text-white">Author:- {{i[1]}}</h4>
+                            <h4 class="text-white">Publisher:- {{i[3]}}</h4>
+                            <h4 class="text-white">y_of_publi :-{{i[4]}}</h4>
+                        </div>
+                    </div>
+                </div>
+             {% endfor %}
+
+            {% endif %}
+
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>

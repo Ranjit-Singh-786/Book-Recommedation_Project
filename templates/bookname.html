@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>list of book name</title>
+    </head>
+<style>
+h3{
+    margin-top: 18px;
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  /* background-color: #96D4D4; */
+  border-radius: 10px;
+  text-align: center;
+  
+}
+table tr td:hover {
+    background-color: #e6a927;
+    }
+    p{
+        margin-left: 40px;
+    }
+</style>
+    <body >
+        <h3>These are all name of all famous books</h3>
+        <p>you can copy the book Name from here. to get recommendation of the books.</p>
+        <a href="/">HOME</a>
+        <table id="tabl">
+            <th>BOOK NAMES</th>  
+        {% for book in list_fo_book_name %}  
+            <tr>
+                <td>{{ book }}</td>  
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </body>
+</html>
+
+
